@@ -1,0 +1,132 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Modal backdrop styling */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Slightly darker backdrop for better focus */
+    z-index: 1050; /* Ensures modal is above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allows scrolling if the modal content is taller than the screen */
+  }
+  
+  /* Modal content box styling */
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    margin: auto; /* Helps with responsiveness */
+    border-radius: 8px;
+    max-width: 500px; /* Adjust based on your content needs */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    animation: modalFadeIn 0.3s; /* Smooth fade-in effect */
+  }
+  
+  /* Close button styling */
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #000;
+  }
+  
+  /* Modal fade-in animation */
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+      max-width: none;
+    }
+  }
+
+  /* Existing modal-backdrop and modal-content styles remain the same */
+
+/* Style for the image inside the modal */
+.modal-content img {
+    display: block; /* Removes any inline behavior */
+    max-width: 100%; /* Ensures the image is not wider than the modal */
+    max-height: 80vh; /* Limits image height to be less than the viewport height */
+    margin: auto; /* Centers the image horizontally */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  }
+  
+  /* Updated close-modal button for better visibility over images */
+  .close-modal {
+    position: absolute;
+    top: -10px; /* Adjusts the position to be outside the modal-content box */
+    right: -10px;
+    background-color: #fff; /* Ensures the button is visible on all backgrounds */
+    border-radius: 50%; /* Circular shape */
+    width: 30px; /* Fixed size */
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adds a subtle shadow for depth */
+    z-index: 2; /* Ensures it's above the image */
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #000;
+    background-color: #e6e6e6; /* Light grey background on hover/focus */
+  }
+  
+  /* Continue with the existing animations and responsive adjustments */
+    @media (max-width: 600px) {
+        .modal-content {
+        width: 90%;
+        max-width: none;
+        }
+    }
+    
+    
